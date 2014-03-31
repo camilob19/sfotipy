@@ -56,7 +56,6 @@ img
 
 .relative
 	position relative
-	background gris_claro
 
 .padding
 	padding 1em
@@ -151,6 +150,13 @@ img
 	&.small
 		width 20em 
 		margin 0 auto
+
+.input
+	border 1px solid gris_oscuro
+	height 2.5em
+	border-radius 5px
+	padding 0 1em 0 2em
+
 		
 @media screen and (min-width:480px)
 
@@ -184,7 +190,14 @@ img
 		height 38px
 	.username
 		color gris_claro
+		margin-left .5em
 		position relative
 		top 9px
-		margin-left .5em
+		&:after
+			display inline-block
+			content "" 
+			border-left 7px solid transparent
+			border-right 7px solid transparent
+			border-top 9px solid gris_claro
+			margin-left .4em
 
