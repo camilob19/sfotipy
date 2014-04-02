@@ -3,6 +3,7 @@
 
 gris_oscuro = #333333
 gris_claro = #818181
+gris_mas_claro = #F0F0F0
 rojo = #BD2556
 
 a
@@ -17,6 +18,11 @@ figure
 
 img
 	vertical-align top
+
+ul
+	padding 0
+	margin 0
+
 .button-menu
 	color gris_oscuro
 	left .5em
@@ -157,7 +163,19 @@ img
 	border-radius 5px
 	padding 0 1em 0 2em
 
-		
+.search-icon
+	color gris_claro
+	left .5em
+	position absolute
+	top .8em
+
+.close-icon
+	position absolute
+	top .5em
+	color gris_claro
+	right .5em
+	font-size 1.2em
+	
 @media screen and (min-width:480px)
 
 	.song
@@ -172,9 +190,28 @@ img
 			width auto
 
 @media screen and (min-width:1000px)
-
+	body
+		background gris_mas_claro
 	.button-menu
-		display none	
+		display none
+
+	.menu
+		display block
+		background gris_mas_claro
+		overflow hidden
+		.item
+			float left
+			list-style none
+			a
+				color gris_oscuro
+				text-transform uppercase
+				cursor pointer
+				padding 1em
+				display block
+				border-top 5px solid transparent
+				&:hover
+					border-top 5px solid gris_claro
+
 	.header
 		height auto
 		.title
@@ -185,6 +222,7 @@ img
 	.logo
 		padding 1.3em 0
 		overflow hidden
+		background white
 	.avatar
 		width 38px
 		height 38px
